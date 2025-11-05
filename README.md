@@ -94,3 +94,5 @@ To enable automatic deployments to Vercel, you need to:
 This repository has been set up with CI/CD pipelines using GitHub Actions and Vercel for automated testing and deployment.
 
 **Modified as part of CI/CD assignment** - Connected to Vercel with automated deployments on push to main branch.
+
+Triggering workflow run to verify CI/CD pipeline.
