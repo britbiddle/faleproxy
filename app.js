@@ -53,14 +53,17 @@ app.post('/fetch', async (req, res) => {
     }).each(function() {
       // Replace text content but not in URLs or attributes
       const text = $(this).text();
-      const newText = text.replace(/Yale/g, 'Fale').replace(/yale/g, 'fale');
+      // INTENTIONAL BUG FOR CI/CD ASSIGNMENT: Breaking replacement to cause test failure
+      // This will cause tests to fail because lowercase 'yale' won't be replaced
+      const newText = text.replace(/Yale/g, 'Fale'); // Missing .replace(/yale/g, 'fale') - intentional bug
       if (text !== newText) {
         $(this).replaceWith(newText);
       }
     });
     
     // Process title separately
-    const title = $('title').text().replace(/Yale/g, 'Fale').replace(/yale/g, 'fale');
+    // INTENTIONAL BUG: Missing lowercase replacement
+    const title = $('title').text().replace(/Yale/g, 'Fale'); // Missing .replace(/yale/g, 'fale') - intentional bug
     $('title').text(title);
     
     return res.json({ 
