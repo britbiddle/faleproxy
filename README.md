@@ -96,3 +96,4 @@ This repository has been set up with CI/CD pipelines using GitHub Actions and Ve
 **Modified as part of CI/CD assignment** - Connected to Vercel with automated deployments on push to main branch.
 
 Triggering workflow run to verify CI/CD pipeline.
+Test change
